@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex调整缝隙</title>
+    <style>
+        .row1{
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .row1 .box1 {
+            width: 80px;
+            height: 80px;
+            background-color: palegoldenrod;
+        }
+
+        .row1 .box2 {
+            width: 80px;
+            height: 80px;
+            background-color: tomato;
+        }
+
+        .row1 .box3 {
+            width: 80px;
+            height: 80px;
+            background-color: purple;
+        }
+        .row2{
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .row2 .box1 {
+            width: 80px;
+            height: 80px;
+            background-color: palegoldenrod;
+        }
+
+        .row2 .box2 {
+            width: 80px;
+            height: 80px;
+            background-color: tomato;
+        }
+
+        .row2 .box3 {
+            width: 80px;
+            height: 80px;
+            background-color: purple;
+        }
+
+        .row3{
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .row3 .box1 {
+            width: 80px;
+            height: 80px;
+            background-color: palegoldenrod;
+        }
+
+        .row3 .box2 {
+            width: 80px;
+            height: 80px;
+            background-color: tomato;
+        }
+
+        .row3 .box3 {
+            width: 80px;
+            height: 80px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h3>flex:调整缝隙位置 justify-content属性</h3>
+    <h4>justify-content: space-around;</h4>
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <h4>justify-content: space-between;</h4>
+    <div class="row2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <h4>justify-content: center;</h4>
+    <div class="row3">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

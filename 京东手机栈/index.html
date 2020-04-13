@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多快好省，购物在京东</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <!-- 清除样式链接 -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- swiper加载插件 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="cat">
+            <i></i>
+        </div>
+        <div class="sql">
+            <div class="so">
+                <i class="jd_logo"></i>
+                <i class="line"></i>
+                <i class="sou"></i>
+                <span class="con">伊利纯牛奶</span>
+            </div>
+        </div>
+        <div class="login">
+            <a href="">登录</a>
+        </div>
+    </header>
+    <!-- 轮播图 -->
+    <section class="swiper_pic">
+        <section class="swiper_bg">1</section>
+        <!-- swiperhtml结构 -->
+        <div class="swiper-container" id="carousel_pic">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href=""><img src="images/q1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q2.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q4.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q5.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q6.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q7.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="images/q8.jpg" alt=""></a></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </section>
+
+    <!-- swiper加载插件 -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        // 驱动轮播图
+        var mySwiper = new Swiper('#carousel_pic', {
+            // 循环模式
+            loop: true,
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // 自动轮播
+            autoplay: {
+                // 自动间隔
+                delay: 1000,
+                // 最后一张不停
+                stopOnLastSlide: false,
+                // 当用户拨弄了一下，就停
+                disableOnInteraction: true,
+            }
+        });
+    </script>
+
+    <!-- 分类 -->
+    <nav>
+         <!-- swiperhtml结构 -->
+         <div class="swiper-container" id="classify">
+            <div class="swiper-wrapper">
+                <!-- 第一页分类 -->
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="the_icon">
+                            <img src="images/icon1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon1.png" alt="">
+                            <span>京东超市</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="the_icon">
+                            <img src="images/icon2.png" alt="">
+                            <span>数码电器</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon2.png" alt="">
+                            <span>数码电器</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon2.png" alt="">
+                            <span>数码电器</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon2.png" alt="">
+                            <span>数码电器</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon2.png" alt="">
+                            <span>数码电器</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二页分类 -->
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="the_icon">
+                            <img src="images/icon3.png" alt="">
+                            <span>京东到家</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon3.png" alt="">
+                            <span>京东到家</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon3.png" alt="">
+                            <span>京东到家</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon3.png" alt="">
+                            <span>京东到家</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon3.png" alt="">
+                            <span>京东到家</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="the_icon">
+                            <img src="images/icon4.png" alt="">
+                            <span>京东生鲜</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon4.png" alt="">
+                            <span>京东生鲜</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon4.png" alt="">
+                            <span>京东生鲜</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon4.png" alt="">
+                            <span>京东生鲜</span>
+                        </div>
+                        <div class="the_icon">
+                            <img src="images/icon4.png" alt="">
+                            <span>京东生鲜</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </nav>
+    <script>
+        // 驱动轮播图
+        var mySwiper = new Swiper('#classify', {
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认识视口</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        // 在h1标签中输出屏幕的宽度
+        var h1 = document.querySelector('h1');
+
+        // document是文档的意思，documentElement表示文档根元素，就是屏幕
+        // clientWidth表示宽度
+        h1.innerHTML = '你的屏幕宽度是' + document.documentElement.clientWidth;
+    </script>
+</body>
+</html>

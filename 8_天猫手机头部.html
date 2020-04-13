@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天猫TMALL</title>
+    <!-- CSS样式 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 3.6rem;
+            width: 100%;
+            background-color: rgb(255, 0, 54);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        header .row1 {
+            height: 1.6rem;
+            display: flex;
+        }
+
+        /* 分类按钮 */
+        header .row1 .list {
+            width: 2.25rem;
+            height: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .row1 .list i {
+            width: 0.95rem;
+            height: 0.95rem;
+            background: url(images/Tmail_icons.png) no-repeat;
+            /* 下面这两个数值不好算 */
+            /* 宽度计算方法：0.95 / (42 / 564) */
+            /* 高度计算方法：12.76 / (564 / 62) */
+            background-size: 12.76rem 1.403rem;
+            /* Y的偏移量的计算方法是，设计图上偏移了8px，是精灵高度的8分之1 */
+            /* 0.95 / 8 */
+            background-position: 0 -0.118rem;
+        }
+
+        /* 天猫logo */
+        header .row1 .logo {
+            flex: 1;
+            height: 1.66rem;
+            background: url(images/Tmail_logo.png) no-repeat;
+            background-size: 4.74rem auto;
+            background-position: center center;
+        }
+
+        /* 登录 */
+        header .row1 .login {
+            width: 2.25rem;
+            height: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease 0s;
+        }
+
+        header .row1 .login span {
+            color: #fff;
+            font-size: 0.7rem;
+        }
+
+        /* 搜索框 */
+        header .row2 {
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease 0s;
+        }
+
+        header .row2 .sql {
+            width: 95%;
+            height: 1.4rem;
+            background-color: #fff;
+            border-radius: 0.3rem;
+            transition: all .5s ease 0s;
+        }
+        header .row2 .sql .sql_icon{
+            position: absolute;
+            width: 2rem;
+            height: 1.4rem;
+        }
+        header .row2 .sql .sql_icon i{
+            position: absolute;
+            width: 0.68rem;
+            height: 0.7rem;
+            top: 0.35rem;
+            left: 0.4rem;
+            /* border: 1px solid #000; */
+            background: url(images/Tmail_sql.png);
+            background-size:0.7rem  auto;
+            background-position: center center;
+        }
+        header .row2 .sql .sql_con{
+            position: relative;
+            width: 5rem;
+            height: 1.4rem;
+            left: 1.5rem;
+            /* border: 1px solid #000; */
+        }
+        header .row2 .sql .sql_con span{
+            position: absolute;
+            height: 1.4rem;
+            line-height: 1.4rem;
+            color: rgb(145, 141, 141);
+            font-size: 0.55rem;
+        }
+        p {
+            width: 100%;
+            height: 5rem;
+            background-color: wheat;
+            color: rgb(109, 106, 106);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 卷动时 */
+        header.narrow {
+            height: 1.6rem;
+        }
+
+        header.narrow .row2 {
+            height: 0;
+        }
+
+        header.narrow .sql {
+            transform: translateY(-0.8rem) scale(0.75);
+        }
+
+        header.narrow .logo {
+            transform: translateY(-200px) scale(0);
+        }
+
+        body {
+            padding-top: 3.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="row1">
+            <div class="list">
+                <i></i>
+            </div>
+            <div class="logo" id="logo"></div>
+            <dicv class="login">
+                <span>登录</span>
+            </dicv>
+        </div>
+
+        <div class="row2">
+            <div class="sql">
+                <div class="sql_icon">
+                    <i></i>
+                </div>
+                <div class="sql_con">
+                    <span>搜索商品、品牌</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 内容 -->
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+    <p>content</p>
+
+    <script>
+        // 驱动rem
+        function setHTMLFontSize() {
+            // 设置字号为屏幕视口宽度除以15，一行就是15rem
+            var windowsW = document.documentElement.clientWidth;
+            var rate = windowsW / 600;
+            document.documentElement.style.fontSize = rate * 40 + 'px';
+        }
+
+        window.onresize = setHTMLFontSize;
+        setHTMLFontSize();
+
+
+        var header = document.getElementById('header');
+        var logo = document.getElementById('logo');
+
+        // 卷动
+        window.onscroll = function () {
+            // 阈值是1.6rem，就是row1这个盒子的height
+            // 要算清楚1.6是多少px？？
+            var a = document.documentElement.clientWidth / 15 * 1.6;
+            // console.log(a);
+            
+            var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            logo.innerHTML = scroll;
+
+            if (scroll > a) {
+                header.className = 'narrow';
+            } else {
+                header.className = '';
+            }
+        };
+    </script>
+</body>
+
+</html>

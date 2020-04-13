@@ -1,0 +1,273 @@
+/* 媒体查询 */
+html {
+    font-size: 50px;
+    /* height: 100%; */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body {
+    font-size: 24px;
+    padding-top: 36px;
+    position: relative;
+}  */
+
+@media screen and (min-width:320px) {
+    html {
+        font-size: 21.33px
+    }
+
+    body {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width:360px) {
+    html {
+        font-size: 24px
+    }
+
+    body {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width:375px) {
+    html {
+        font-size: 25px
+    }
+
+    body {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width:384px) {
+    html {
+        font-size: 25.6px
+    }
+
+    body {
+        font-size: 14px
+    }
+}
+
+@media screen and (min-width:400px) {
+    html {
+        font-size: 26.67px
+    }
+
+    body {
+        font-size: 14px
+    }
+}
+
+@media screen and (min-width:414px) {
+    html {
+        font-size: 27.6px
+    }
+
+    body {
+        font-size: 14px
+    }
+}
+
+@media screen and (min-width:424px) {
+    html {
+        font-size: 28.27px
+    }
+
+    body {
+        font-size: 14px
+    }
+}
+
+@media screen and (min-width:480px) {
+    html {
+        font-size: 32px
+    }
+
+    body {
+        font-size: 15.36px
+    }
+}
+
+@media screen and (min-width:540px) {
+    html {
+        font-size: 36px
+    }
+
+    body {
+        font-size: 17.28px
+    }
+}
+
+@media screen and (min-width:720px) {
+    html {
+        font-size: 48px
+    }
+
+    body {
+        font-size: 23.04px
+    }
+}
+
+@media screen and (min-width:750px) {
+    html {
+        font-size: 50px
+    }
+
+    body {
+        font-size: 24px
+    }
+}
+/* 头部 */
+header{
+    display: flex;
+    /* 竖直排列 */
+    flex-direction: column;
+    /* 居中 */
+    align-items: center;
+    height: 3.752rem;
+    background-image: linear-gradient(to right, rgba(26,47,74), rgba(63,149,142) 98%);
+}
+/* 头部-第一行：图标 */
+header .row1{
+    flex: 1;
+    width: 100%;
+    /* background-color: gray; */
+}
+header .row1 .top{
+    display: flex;
+}
+/* 爱艺奇logo */
+header .row1 .top .logo{
+    width: 2.1rem;
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .row1 .top .logo i{
+    width: 1.155rem;
+    height: 1.433rem;
+    background: url(../images/headerLogo-iqiyi.png) no-repeat;
+    background-size: cover;
+}
+/* 搜索框盒子 */
+header .row1 .top .sql{
+   flex: 1;
+   height: 1.17rem;
+   box-sizing: border-box;
+   display: flex;
+   /* 居中 */
+   align-items: center;
+   justify-content: center;
+}
+/* 搜索框 */
+header .row1 .top .sql .sql_kuang{
+    position: absolute;
+    width: 52%;
+    height: 1.17rem;
+    top: 0.39rem;
+    left: 1.95rem;
+    background-color: rgba(34,79,95);
+    border-radius: 0.975rem;
+}
+/* 搜索框文字 */
+header .row1 .top .sql .sql_kuang .con{
+    position: absolute;
+    color: rgb(255, 255, 255,0.6);
+    font-size: 0.546rem;
+    top: 0.195rem;
+    left: 0.39rem;
+}
+/* 搜索框icon */
+header .row1 .top .sql .sql_kuang .sql_logo{
+    position: absolute;
+    width: 0.67rem;
+    height:0.67rem;
+    background: url(../images/c-channel-all-20200212.png) no-repeat; 
+    background-size: 3.645rem auto;
+    background-position: 0rem -0.97rem;
+    top: 0.18rem;
+    right: 0.39rem;
+}
+/* 登录人像按钮 */
+header .row1 .top .login{
+    width: 1.94rem;
+    height: 1.54rem;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .row1 .top .login i{
+    width: 0.829rem;
+    height: 0.829rem;
+    background: url(../images/c-channel-all-20200212.png) no-repeat; 
+    background-size: 3.645rem auto;
+    background-position: -0.663rem -0.936rem;
+}
+/* 观看完整视频 */
+header .row1 .top .watch{
+    width: 3.79rem;
+    height: 1.38rem;
+    box-sizing: border-box;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    /* border: 1px solid #000; */
+}
+header .row1 .top .watch img{
+    width: 100%;
+    height:100%;
+}
+/* 头部-第二行：搜索导航 */
+header .row2{
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+/* 导航分类 */
+header .row2 #choose{
+    position: absolute;
+    width: 300%;
+    height: 1.8rem;
+}
+/* 导航按钮 */
+header .row2 .choose_menu{
+    position: absolute;
+    width: 1.736rem;
+    height: 1.8rem;
+    background-color: rgb(62,146,140);
+    right: 0;
+}
+header .row2 .choose_menu .menu{
+    position: absolute;
+    width: 0.672rem;
+    height: 0.532rem;
+    top: 0.68rem;
+    right: 0.52rem;
+    background: url(../images/c-channel-all-20200212.png) no-repeat;
+    background-size: 3.645rem auto;
+    background-position: -1.5rem -1.17rem;
+}
+.row2 .swiper-slide p span{
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.75rem;
+    /* box-sizing: border-box; */
+    padding: 0 0.4rem;
+}
+/* 轮播图 */
+nav #banner{
+    width: 100%;
+    height: 7.5rem;
+}
+nav #banner img{
+    width: 100%;
+    height: 100%;
+}
+/*  */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS驱动rem属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 40px;
+        }
+        .row1{
+            width: 8rem;
+            height: 2rem;
+        }
+        .row1 .box1{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: rosybrown;
+        }
+        .row1 .box2{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: royalblue;
+        }
+        .row1 .box3{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: seagreen;
+        }
+        .row1 .box4{
+            float: left;
+            width: 2rem;
+            height: 2rem;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="row1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+
+    <script>
+        window.onresize = function(){
+            setFontSize();
+        }
+            setFontSize();
+
+        function setFontSize(){
+            var rate = document.documentElement.clientWidth/320;
+            var fs = 40*rate;
+            document.documentElement.style.fontSize = fs+'px';
+        }
+    </script>       
+</body>
+</html>
